@@ -37,4 +37,7 @@ multi_ai_agent=Agent(
 )
 multi_ai_agent.print_response("summarize analyst recommendation and share latest news of NVDA",stream=True)
 
-# For openai key error always run this in terminal : setx GROQ_API_KEY ***REMOVED-GROQ-KEY***
+# Set your API keys in the environment before running, e.g.:
+#   setx GROQ_API_KEY your-groq-api-key      (Windows)
+#   export GROQ_API_KEY=your-groq-api-key    (macOS/Linux)
+# Or place them in a .env file (loaded via python-dotenv). Never hardcode keys.

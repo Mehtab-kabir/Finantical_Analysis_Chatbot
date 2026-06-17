@@ -18,36 +18,49 @@ A **multi-agent AI system** that provides real-time **stock market insights, fin
 
 ## 📂 Project Structure  
 
-📦 finance-ai-agent  
- ┣ 📜 .env                 # Environment variables (API keys)  
- ┣ 📜 main.py              # Main application script  
- ┣ 📜 requirements.txt      # Required dependencies  
- ┣ 📜 README.md            # Project documentation  
- ┗ 📂 assets               # UI assets and logos  
+📦 Finantical_Analysis_Chatbot  
+ ┣ 📜 .env                 # Your API keys — create from .env.example, never commit  
+ ┣ 📜 .env.example         # Template for required environment variables  
+ ┣ 📜 finantial_agent.py   # CLI multi-agent run (prints a sample response in the terminal)  
+ ┣ 📜 playground.py        # Launches the Phi Playground web UI  
+ ┣ 📜 requirment.txt       # Required dependencies  
+ ┗ 📜 README.md            # Project documentation  
 
 
 ## 🚀 Installation & Usage  
 
 ### 1️⃣ **Clone the Repository**  
 ```bash
-git clone https://github.com/yourusername/finance-ai-agent.git
-cd finance-ai-agent
+git clone https://github.com/Mehtab-kabir/Finantical_Analysis_Chatbot.git
+cd Finantical_Analysis_Chatbot
 ```
 
 ### 2️⃣ **Set Up Environment Variables**  
-Create a `.env` file and add your **Phi API key**:  
+Copy the template and fill in your keys (never commit `.env`):  
+```bash
+cp .env.example .env
+```
 ```ini
-PHI_API_KEY=your_phi_api_key_here
+GROQ_API_KEY=your-groq-api-key       # https://console.groq.com/keys
+PHI_API_KEY=your-phidata-api-key     # required for the Playground UI
+OPENAI_API_KEY=your-openai-api-key   # optional, used by finantial_agent.py
 ```
 
 ### 3️⃣ **Install Dependencies**  
 ```bash
-pip install -r requirements.txt
+pip install -r requirment.txt
 ```
 
 ### 4️⃣ **Run the Application**  
+
+Run the CLI agent (prints a sample analysis to the terminal):
 ```bash
-python main.py
+python finantial_agent.py
+```
+
+Or launch the interactive Phi Playground web UI:
+```bash
+python playground.py
 ```
 The Playground UI will be available at `http://localhost:8000`.
 
